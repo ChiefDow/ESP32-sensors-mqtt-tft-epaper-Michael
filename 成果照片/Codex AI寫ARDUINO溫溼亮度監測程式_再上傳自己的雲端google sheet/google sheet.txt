@@ -1,0 +1,9 @@
+google sheet
+
+Sheet ID:自己的
+工作表名稱:data
+DHT11:在IO14，光敏電阻在IO33
+每10秒傳輸一筆溫度，濕度，亮度
+OLED上繼續呈現數值，上傳過程要顯示狀態
+檔名:24_google_dht_light_oled
+編譯後直接燒錄

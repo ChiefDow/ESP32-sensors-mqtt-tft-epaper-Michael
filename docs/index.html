@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ESP32 Sensors MQTT TFT E-Paper：感測器、MQTT、TFT、OLED 與電子紙整合展示。">
+  <title>ESP32 Sensors · MQTT · TFT · E-Paper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁"><span class="brand-mark">⌁</span><span>ESP32 / FIELD LAB</span></a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#system">系統</a>
+      <a href="#projects">專案</a>
+      <a href="#gallery">成果</a>
+      <a class="nav-cta" href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> OPEN HARDWARE / 2026</p>
+        <h1>讓資料<br><em>看得見。</em></h1>
+        <p class="hero-lede">一套以 ESP32 為核心的感測與聯網實驗室，把溫度、濕度與亮度從感測器送上 MQTT，再呈現在 TFT、OLED 與電子紙上。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">探索專案 <span>↓</span></a>
+          <a class="button button-ghost" href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael" target="_blank" rel="noreferrer">開啟原始碼 ↗</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal delay-1">
+        <div class="visual-frame">
+          <div class="visual-top"><span>LIVE SENSOR DISPLAY</span><span>EPD 2.9 / MQTT</span></div>
+          <div class="epaper-card">
+            <div class="epaper-head"><span>FIELD NODE 40</span><span class="status">● ONLINE</span></div>
+            <div class="epaper-reading"><span class="reading-value">26.4</span><span class="reading-unit">°C</span></div>
+            <div class="epaper-meta"><span>HUMIDITY <b>62%</b></span><span>LIGHT <b>784 lx</b></span></div>
+            <div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><span>MQTT / PUBLISHED</span></div>
+          </div>
+          <div class="wire wire-one"></div><div class="wire wire-two"></div>
+          <div class="visual-caption"><span>01</span><span>LOW POWER / HIGH SIGNAL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="技術關鍵字"><span>ESP32</span><span>MQTT</span><span>WAVESHARE E-PAPER</span><span>TFT / OLED</span><span>DHT / AHT</span><span>OPEN SOURCE</span></section>
+
+    <section id="system" class="content-section system-section">
+      <div class="section-intro reveal"><p class="eyebrow">01 / SYSTEM VIEW</p><h2>從感測到畫面，<br><em>每一段都可追蹤。</em></h2></div>
+      <div class="system-layout">
+        <div class="system-copy reveal"><p>本專案以模組化的方式累積 ESP32 開發經驗：先讀取感測器，再透過 Wi‑Fi 與 MQTT 傳遞資料，最後交給不同的顯示介面呈現。每個資料節點都能獨立測試，也能組合成完整的 IoT 原型。</p><div class="stat-row"><div><strong>40+</strong><span>sketches</span></div><div><strong>4</strong><span>display types</span></div><div><strong>1</strong><span>shared lab</span></div></div></div>
+        <div class="architecture-card reveal delay-1"><img src="./assets/architecture_diagram.png" alt="ESP32 IoT 系統架構圖" loading="lazy"><span class="image-label">SYSTEM ARCHITECTURE / 01</span></div>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section projects-section">
+      <div class="section-intro reveal"><p class="eyebrow">02 / PROJECT TRACKS</p><h2>四條路徑，<br><em>同一個核心。</em></h2></div>
+      <div class="project-grid">
+        <article class="project-card featured reveal"><div class="card-index">40</div><div class="card-icon">▣</div><h3>E-Paper MQTT</h3><p>2.9 吋三色電子紙即時顯示溫度、濕度與亮度，並以 MQTT 發布資料。</p><div class="card-foot"><span>ESP32 · DHT11 · MQTT</span><a href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael/blob/main/40_epaper_mqtt/40_epaper_mqtt.ino" target="_blank" rel="noreferrer">OPEN SKETCH ↗</a></div></article>
+        <article class="project-card reveal delay-1"><div class="card-index">34</div><div class="card-icon">◫</div><h3>TFT Control</h3><p>以 ILI9225 TFT 建立可互動的 MQTT 控制頁面與狀態視覺化。</p><div class="card-foot"><span>ILI9225 · PUBSUB</span><a href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael/blob/main/34_ili_MQTT_ctrl/34_ili_MQTT_ctrl.ino" target="_blank" rel="noreferrer">OPEN SKETCH ↗</a></div></article>
+        <article class="project-card reveal delay-2"><div class="card-index">22</div><div class="card-icon">◎</div><h3>OLED Sensors</h3><p>小型、低功耗的 DHT 與光線感測節點，適合快速驗證與教學。</p><div class="card-foot"><span>OLED · DHT · LIGHT</span><a href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael/blob/main/22_DHT_light_OLED/22_DHT_light_OLED.ino" target="_blank" rel="noreferrer">OPEN SKETCH ↗</a></div></article>
+        <article class="project-card reveal delay-3"><div class="card-index">36</div><div class="card-icon">✦</div><h3>Display Experiments</h3><p>電子紙、QR code、字型資產與圖像排版的多輪實驗紀錄。</p><div class="card-foot"><span>EPD · ASSETS · UI</span><a href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael/blob/main/36_epaper/36_epaper.ino" target="_blank" rel="noreferrer">OPEN SKETCH ↗</a></div></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="content-section gallery-section">
+      <div class="section-intro reveal"><p class="eyebrow">03 / FIELD NOTES</p><h2>從麵包板到<br><em>可讀的成果。</em></h2></div>
+      <div class="gallery-grid">
+        <figure class="gallery-large reveal"><img src="./assets/latest-epaper.jpg" alt="最新電子紙裝置展示" loading="lazy"><figcaption><span>01</span> E-PAPER NODE / LATEST TEST</figcaption></figure>
+        <figure class="gallery-small reveal delay-1"><img src="./assets/mqtt-panel.jpg" alt="MQTT 控制面板最新畫面" loading="lazy"><figcaption><span>02</span> MQTT PANEL / LIVE DATA</figcaption></figure>
+        <figure class="gallery-small reveal delay-2"><img src="./assets/sensor-output.jpg" alt="電子紙感測結果" loading="lazy"><figcaption><span>03</span> SENSOR OUTPUT / FIELD NOTE</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="cta-section reveal"><div><p class="eyebrow">READY TO BUILD?</p><h2>把下一個想法<br><em>接上 ESP32。</em></h2></div><a class="button button-primary" href="https://github.com/ChiefDow/ESP32-sensors-mqtt-tft-epaper-Michael" target="_blank" rel="noreferrer">前往 GitHub ↗</a></section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 MICHAEL / ESP32 FIELD LAB</span><span>BUILT WITH CURIOSITY + CIRCUITS</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

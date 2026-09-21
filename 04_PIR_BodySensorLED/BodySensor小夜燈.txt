@@ -1,0 +1,47 @@
+// BodySensor小夜燈
+
+const int LIGHT_SENSOR = 23;
+
+const int LED1 = 15;   // D15(A1)
+const int LED2 = 2;    // D2
+const int LED3 = 4;    // D4
+
+void setup()
+{
+    pinMode(LIGHT_SENSOR, INPUT);
+
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+
+    Serial.begin(115200);
+
+    Serial.println("Auto Night Light System Start");
+}
+
+void loop()
+{
+    int lightState = digitalRead(LIGHT_SENSOR);
+
+    if (lightState == HIGH)
+    {
+        // 有感測時發光
+        digitalWrite(LED1, HIGH);
+        digitalWrite(LED2, HIGH);
+        digitalWrite(LED3, HIGH);
+
+        Serial.println("Dark -> All LEDs ON");
+        delay(10000);
+    }
+    else
+    {
+        // 無感測時熄滅
+        digitalWrite(LED1, LOW);
+        digitalWrite(LED2, LOW);
+        digitalWrite(LED3, LOW);
+
+        Serial.println("Bright -> All LEDs OFF");
+    }
+
+    
+}

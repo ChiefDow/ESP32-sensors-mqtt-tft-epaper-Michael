@@ -1,0 +1,34 @@
+# Arduino and tool caches
+.arduino-cli/
+**/build/
+**/compile-libs/
+_build_*/
+
+# Generated firmware and compiler output
+*.bin
+*.elf
+*.map
+*.o
+*.d
+*.a
+*.hex
+*.log
+
+# Local/editor files
+.vscode/
+.idea/
+*.bak
+*.tmp
+
+# Local secrets and machine-specific settings
+*.secrets.*
+secrets.h
+credentials.h
+handoff
+handoff.md
+AI對話交接.txt
+codex AI.txt
+
+# Large local media
+*.mp4
+*.mov
